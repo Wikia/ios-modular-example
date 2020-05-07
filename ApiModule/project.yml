@@ -1,0 +1,32 @@
+name: ApiModule
+configs:
+  Debug: debug
+  Release: release
+options:
+  carthageBuildPath: "../Carthage/Build"
+  bundleIdPrefix: com.fandom
+  deploymentTarget:
+    iOS: "13.0"
+targets:
+  ApiModule:
+    type: framework
+    platform: iOS
+    sources: [ApiModule]
+    dependencies:
+      - carthage: SwiftyJSON
+  ApiModuleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [ApiModuleTests]
+    dependencies:
+      - framework: ApiModule.framework
+schemes:
+  ApiModule:
+    build:
+      targets:
+        ApiModule: [run, test, profile, analyze, archive]
+        ApiModuleTests: [test]
+    test:
+      config: Debug
+      targets:
+        - ApiModuleTests

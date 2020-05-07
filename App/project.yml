@@ -1,0 +1,24 @@
+name: ModularApp
+options:
+  carthageBuildPath: "../Carthage/Build"
+  bundleIdPrefix: com.fandom
+targets:
+  ModularApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources: [ModularApp]
+    dependencies:
+      - framework: FeatureModule.framework
+      - framework: ApiModule.framework
+  ModularAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [ModularAppTests]
+    dependencies:
+      - target: ModularApp
+projectReferences:
+  FeatureModule:
+    path: ../FeatureModule/FeatureModule.xcodeproj
+  ApiModule:
+    path: ../ApiModule/ApiModule.xcodeproj

@@ -1,0 +1,17 @@
+{
+    "ApiModule": [],
+    "ApiModuleTests": [
+        "ApiModule"
+    ],
+    "FeatureModule": [
+        "ApiModule"
+    ],
+    "FeatureModuleTests": [
+        "FeatureModule"
+    ],
+    "ModularApp": [
+        "ApiModule",
+        "FeatureModule"
+    ],
+    "ModularAppTests": []
+}

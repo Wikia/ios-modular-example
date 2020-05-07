@@ -1,0 +1,32 @@
+name: FeatureModule
+configs:
+  Debug: debug
+  Release: release
+options:
+  carthageBuildPath: "../Carthage/Build"
+  bundleIdPrefix: com.fandom
+  deploymentTarget:
+    iOS: "13.0"
+targets:
+  FeatureModule:
+    type: framework
+    platform: iOS
+    sources: [FeatureModule]
+    dependencies:
+      - framework: ApiModule.framework
+  FeatureModuleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [FeatureModuleTests]
+    dependencies:
+      - framework: FeatureModule.framework
+schemes:
+  FeatureModule:
+    build:
+      targets:
+        FeatureModule: [run, test, profile, analyze, archive]
+        FeatureModuleTests: [test]
+    test:
+      config: Debug
+      targets:
+        - FeatureModuleTests
