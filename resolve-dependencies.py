@@ -5,6 +5,7 @@ from os import getcwd, path, listdir
 PROJECT_YAML = 'project.yml'
 PROJECT_YAML_RESOLVED = 'project-resolved.yml'
 
+
 def resolve_dependencies(project, projects, dependency_graph):
     new_project = project.copy()
     targets_keys = ['targetTemplates', 'targets']
@@ -131,11 +132,13 @@ def dependency(direct_dependency, embed,
     else:
         return None
 
+
 def save_dependency_graph_to_json(dependency_graph):
     json_content = json.dumps(dependency_graph, sort_keys=True, indent=4, separators=(',', ': '))
     with open('dependency_graph.json', 'w') as file:
         file.write(json_content)
     print('Saved current dependency graph to dependency_graph.json')
+
 
 def main():
     print('Resolving dependencies')
@@ -143,8 +146,6 @@ def main():
 
     project_directories = [path.join(root_dir, f)
         for f in listdir(root_dir) if path.isdir(path.join(root_dir, f))]
-
-    print(project_directories)
 
     projects = {}
     project_dir_mapping = {}
@@ -168,6 +169,7 @@ def main():
 
     print('Finished resolving dependencies')
     save_dependency_graph_to_json(dependency_graph)
+
 
 if __name__ == '__main__':
     main()
