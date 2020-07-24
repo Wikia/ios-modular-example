@@ -1,0 +1,22 @@
+name: Tests
+options:
+  bundleIdPrefix: com.fandom
+projectReferences:
+  ModularApp:
+    path: ../ModularApp/ModularApp.xcodeproj
+  FeatureModule:
+    path: ../FeatureModule/FeatureModule.xcodeproj
+  ApiModule:
+    path: ../ApiModule/ApiModule.xcodeproj
+schemes:
+  UnitTests:
+    build:
+      targets:
+        ModularApp/ModularAppTests: [test, run]
+        FeatureModule/FeatureModuleTests: [test, run]
+        ApiModule/ApiModuleTests: [test, run]
+    test:
+      targets:
+        - ModularApp/ModularAppTests
+        - FeatureModule/FeatureModuleTests
+        - ApiModule/ApiModuleTests

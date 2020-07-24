@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:ApiModule"
+      name = "ApiModule">
+      <FileRef
+         location = "group:ApiModule.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:App"
+      name = "App">
+      <FileRef
+         location = "group:ModularApp.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:FeatureModule"
+      name = "FeatureModule">
+      <FileRef
+         location = "group:FeatureModule.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Tests"
+      name = "Tests">
+      <FileRef
+         location = "group:Tests.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

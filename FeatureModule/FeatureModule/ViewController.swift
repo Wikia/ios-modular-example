@@ -12,7 +12,7 @@ public class ViewController: UIViewController {
 
     var apiClient: ApiClientProtocol = ApiClient()
     private var books: [Book] = []
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: ViewController.reuseIdentifier)
         tableView.dataSource = self

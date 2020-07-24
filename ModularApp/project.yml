@@ -10,7 +10,6 @@ targets:
     sources: [ModularApp]
     dependencies:
       - framework: FeatureModule.framework
-      - framework: ApiModule.framework
   ModularAppTests:
     type: bundle.unit-test
     platform: iOS

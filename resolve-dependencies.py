@@ -85,6 +85,8 @@ def target_dependencies(target, projects, dependency_set=None, force_embed=False
 
     for framework_dependency in framework_dependencies:
         for project in projects.values():
+            if 'targets' not in project:
+                continue
             for dep_target_name, dep_target in project['targets'].items():
                 if dep_target_name != framework_dependency:
                     continue

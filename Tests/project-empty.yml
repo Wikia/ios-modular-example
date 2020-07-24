@@ -1,0 +1,23 @@
+name: Tests
+options:
+  bundleIdPrefix: com.fandom
+targets:
+  EmptyTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [EmptyTests]
+schemes:
+  UnitTests:
+    build:
+      targets:
+        EmptyTests: [test, run]
+    test:
+      targets: 
+        - EmptyTests
+  UITests:
+    build:
+      targets:
+        EmptyTests: [test, run]
+    test:
+      targets: 
+        - EmptyTests

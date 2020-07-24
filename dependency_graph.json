@@ -10,7 +10,6 @@
         "FeatureModule"
     ],
     "ModularApp": [
-        "ApiModule",
         "FeatureModule"
     ],
     "ModularAppTests": []

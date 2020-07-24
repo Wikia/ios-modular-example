@@ -6,4 +6,4 @@ echo "Generating projects"
 
 xcodegen -s ./FeatureModule/project-resolved.yml
 xcodegen -s ./ApiModule/project-resolved.yml
-xcodegen -s ./App/project-resolved.yml
+xcodegen -s ./ModularApp/project-resolved.yml
