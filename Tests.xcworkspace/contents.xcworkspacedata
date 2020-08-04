@@ -9,8 +9,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:App"
-      name = "App">
+      location = "group:ModularApp"
+      name = "ModularApp">
       <FileRef
          location = "group:ModularApp.xcodeproj">
       </FileRef>
